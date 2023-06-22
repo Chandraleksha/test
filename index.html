@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Complex Rent Calculator</title>
+</head>
+<body>
+  <h2>Shopping Complex Rent Calculator</h2>
+
+  <form id="rentForm">
+    <label for="shop1">Shop 1 Rent:</label>
+    <input type="number" id="shop1" required />
+
+    <label for="shop2">Shop 2 Rent:</label>
+    <input type="number" id="shop2" required />
+
+    <label for="shop3">Shop 3 Rent:</label>
+    <input type="number" id="shop3" required />
+
+    <button type="button" onclick="calculateTotalRent()">Calculate Total Rent</button>
+  </form>
+
+  <div id="totalRentResult"></div>
+
+  <script>
+    // Function to calculate the total rent
+    function calculateTotalRent() {
+      const shop1Rent = parseInt(document.getElementById('shop1').value);
+      const shop2Rent = parseInt(document.getElementById('shop2').value);
+      const shop3Rent = parseInt(document.getElementById('shop3').value);
+
+      const totalRent = shop1Rent + shop2Rent + shop3Rent;
+
+      document.getElementById('totalRentResult').textContent = `Total Rent: $${totalRent}`;
+    }
+  </script>
+</body>
+</html>
